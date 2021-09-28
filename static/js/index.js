@@ -80,11 +80,11 @@ function LED1_Off(){
 
   }
  
-  function Hiii(){
+  function B1(){
   {document.getElementById('sensor1').innerHTML='Alex Reyes';}
 console.log('SE presiono el boton 3:')
   ;}
-function Hii(){
+function B2(){
   {document.getElementById('sensor1').innerHTML='Quinto Semestre';}
 console.log('SE presiono el boton 4:')
   ;}  
