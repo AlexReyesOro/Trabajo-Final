@@ -1,11 +1,13 @@
 //https://www.eclipse.org/paho/clients/js/
 
+
+
 function LED1_On() {
 	//alert("led on");
 	console.log("led on");
 	//document.getElementById("sensor").innerHTML="led on";
 	message = new Paho.MQTT.Message("ON");
-    	message.destinationName = "borisescudero1@gmail.com/T1";
+    	message.destinationName = "alex.reyes@unach.edu.ec/Topic1";
     	client.send(message);
       
 
@@ -16,7 +18,7 @@ function LED1_Off(){
 	//alert("led off");
 	console.log("led off");
 	message = new Paho.MQTT.Message("OFF");
-    	message.destinationName = "borisescudero1@gmail.com/T1";
+    	message.destinationName = "alex.reyes@unach.edu.ec/Topic1";
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
 }
@@ -36,8 +38,8 @@ function LED1_Off(){
   client.onMessageArrived = onMessageArrived;
   var options = {
    useSSL: false,
-    userName: "borisescudero1@gmail.com",
-    password: "1805116199Boris.",
+    userName: "alex.reyes@unach.edu.ec",
+    password: "alexinio10.",
     onSuccess:onConnect,
     onFailure:doFail
   }
@@ -50,9 +52,9 @@ function LED1_Off(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("borisescudero1@gmail.com/T2");
-    message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "borisescudero1@gmail.com/T1";
+    client.subscribe("alex.reyes@unach.edu.ec/Topic2");
+    message = new Paho.MQTT.Message("Hola Mundo");
+    message.destinationName = "alex.reyes@unach.edu.ec/Topic1";
     client.send(message);
 
   }
@@ -79,7 +81,7 @@ function LED1_Off(){
   }
  
   function Hiii(){
-  {document.getElementById('sensor1').innerHTML='Boris Escudero';}
+  {document.getElementById('sensor1').innerHTML='Alex Reyes';}
 console.log('SE presiono el boton 3:')
   ;}
 function Hii(){
